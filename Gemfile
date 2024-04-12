@@ -28,6 +28,8 @@ gem "jbuilder"
 
 gem "themoviedb-api", "~> 1.4", ">= 1.4.1"
 
+gem "app_conf", "~> 0.4.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
