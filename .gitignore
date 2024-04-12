@@ -36,3 +36,6 @@
 
 # Ignore the .idea folder
 /.idea/
+
+# Ignore the application config
+/config/mediadb_conf.yaml
