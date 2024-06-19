@@ -39,3 +39,6 @@
 
 # Ignore the application config
 /config/mediadb_conf.yaml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
