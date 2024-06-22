@@ -4,6 +4,7 @@ valid:
   name: Valid site
   url: https://site.com/
   description: Site Description
+
 one:
   name: MyString
   url: MyString
