@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_21_220159) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_22_003625) do
+  create_table "aliases", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "person_id", null: false
+    t.bigint "site_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_aliases_on_person_id"
+    t.index ["site_id"], name: "index_aliases_on_site_id"
+  end
+
   create_table "people", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -28,4 +39,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_21_220159) do
     t.index ["name"], name: "index_sites_on_name"
   end
 
+  add_foreign_key "aliases", "people"
+  add_foreign_key "aliases", "sites"
 end

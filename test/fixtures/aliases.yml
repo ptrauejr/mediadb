@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  name: Firstname Lastname
+  url:  https://url.com/alias
+  person: valid
+  site: valid
+
+one:
+  name: MyString
+  url: MyString
+  person: one
+  site: one
+
+two:
+  name: MyString
+  url: MyString
+  person: two
+  site: two
