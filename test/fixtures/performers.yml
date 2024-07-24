@@ -1,4 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+valid:
+  alias: valid
+  scene: valid
 
 one:
   alias: one

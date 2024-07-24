@@ -1,7 +1,11 @@
 require "test_helper"
 
 class PerformerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @performer = performers(:valid)
+  end
+
+  test "performer should be valid" do
+    assert @performer.valid?
+  end
 end
