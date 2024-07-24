@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_24_184207) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_24_185223) do
   create_table "aliases", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -28,6 +28,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_24_184207) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_people_on_name"
+  end
+
+  create_table "performers", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.bigint "alias_id", null: false
+    t.bigint "scene_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alias_id"], name: "index_performers_on_alias_id"
+    t.index ["scene_id"], name: "index_performers_on_scene_id"
   end
 
   create_table "scenes", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
@@ -53,5 +62,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_24_184207) do
 
   add_foreign_key "aliases", "people"
   add_foreign_key "aliases", "sites"
+  add_foreign_key "performers", "aliases"
+  add_foreign_key "performers", "scenes"
   add_foreign_key "scenes", "sites"
 end
