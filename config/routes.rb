@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'aliases/new'
+  get 'aliases/create'
+  get 'aliases/update'
+  get 'aliases/destroy'
+  get 'aliases/index'
+  get 'aliases/show'
   get 'people/new'
   get 'people/create'
   get 'people/update'
