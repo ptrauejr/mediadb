@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :scenes
   get 'sites/new'
   get 'sites/create'
   get 'sites/update'
