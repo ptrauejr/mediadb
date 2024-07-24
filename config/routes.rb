@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'people/new'
+  get 'people/create'
+  get 'people/update'
+  get 'people/destroy'
+  get 'people/index'
+  get 'people/show'
   resources :scenes
   get 'sites/new'
   get 'sites/create'
