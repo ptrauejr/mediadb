@@ -1,2 +1,22 @@
-<h1>Sites#index</h1>
-<p>Find me in app/views/sites/index.html.erb</p>
+<h1>Sites</h1>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sites.each do |site| %>
+      <tr>
+        <td><%= site.name %></td>
+        <td><%= site.url %></td>
+        <td><%= site.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
